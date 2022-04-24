@@ -23,9 +23,9 @@ public class TestSuite extends Utility {
     }
 
     @Test
-    public void verifyProductArrangeInAlphabeticalOrder() {
+    public void verifyProductArrangedInAlphabeticalOrder() {
         clickOnElement(By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Computers']"));
-        clickOnElement(By.linkText("Desktop"));
+        clickOnElement(By.linkText("Desktops"));
         WebElement dropDown = driver.findElement(By.xpath("//select[@id='products-orderby']"));
         dropDown.click();
         Select select = new Select(dropDown);
@@ -172,30 +172,30 @@ public class TestSuite extends Utility {
 
         //Verify “Shipping Method” is “Next Day Air”
        /* String expectedMessage7= "Next Day Air";
-        verifyPage(expectedMessage7,By.xpath("//input[@id='shippingoption_1']"),"Shipping is not Match");
+        verifyPage(expectedMessage7,By.xpath("//input[@id='shippingoption_1']"),"Shipping does not match");
         Thread.sleep(500);*/
         //label[normalize-s
         //Verify Total is “$2,950.00”
         String expectedMessage8 = "$2,950.00";
-        verifyPage(expectedMessage8, By.xpath("//tbody/tr[4]/td[2]/span[1]/strong"), "Total Price is not Match");
+        verifyPage(expectedMessage8, By.xpath("//tbody/tr[4]/td[2]/span[1]/strong"), "Total Price does not match");
 
         //Click on “CONFIRM”
         clickOnElement(By.xpath("//button[contains(text(),'Confirm')]"));
 
         //Verify the Text “Thank You”
         String expectedMessage9 = "Thank you";
-        verifyPage(expectedMessage9, By.xpath("//h1[contains(text(),'Thank you')]"), "Message is not Match");
+        verifyPage(expectedMessage9, By.xpath("//h1[contains(text(),'Thank you')]"), "Message does not match");
 
         //Verify the message “Your order has been successfully processed!”
         String expectedMessage10 = "Your order has been successfully processed!";
-        verifyPage(expectedMessage10, By.xpath("//strong[contains(text(),'Your order has been successfully processed!')]"), "Thankful message is not Match");
+        verifyPage(expectedMessage10, By.xpath("//strong[contains(text(),'Your order has been successfully processed!')]"), "Thankful message does not match");
 
         //Click on “CONTINUE”
         clickOnElement(By.xpath("//button[contains(text(),'Continue')]"));
 
         //Verify the text “Welcome to our store”
         String expectedMessage11 = "Welcome to our store";
-        verifyPage(expectedMessage11, By.xpath("//h2[contains(text(),'Welcome to our store')]"), "Promising message appear not Sucessfully");
+        verifyPage(expectedMessage11, By.xpath("//h2[contains(text(),'Welcome to our store')]"), "Promising message does not appear sucessfully");
 
     }
 
